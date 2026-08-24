@@ -205,11 +205,10 @@
     .hero-cta .btn{width:100%;max-width:320px;}
   }
   .hero-facts{
-    margin-top:56px;display:flex;justify-content:center;flex-wrap:wrap;gap:0;
+    margin-top:56px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
     border-top:1px solid rgba(255,255,255,0.18);padding-top:22px;
   }
-  .hero-facts div{padding:0 28px 0 0;margin-right:28px;border-right:1px solid rgba(255,255,255,0.16);}
-  .hero-facts div:last-child{border-right:none;}
+  .hero-facts div{padding:0;margin:0;border-right:none;text-align:center;}
   .hero-facts .k{font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);}
   .hero-facts .v{font-size:15px;color:#fff;margin-top:5px;font-weight:600;}
 
@@ -408,7 +407,6 @@
     .proj-grid{grid-template-columns:repeat(2,1fr);}
     .proj-card.featured{grid-column:span 2;flex-direction:column;align-items:flex-start;}
     .proj-card.featured .proj-mark{writing-mode:horizontal-tb;border-left:none;border-bottom:2px solid var(--chain);padding-left:0;padding-bottom:8px;}
-    .hero-facts div{margin-right:20px;padding-right:20px;}
   }
   @media (max-width:600px){
     .proj-grid{grid-template-columns:1fr;}
@@ -489,7 +487,7 @@
       </div>
       <div class="hero-facts">
         <div><div class="k">Based in</div><div class="v">Abuja, Nigeria</div></div>
-        <div><div class="k">Currently building</div><div class="v">AWS Labs</div></div>
+        <div><div class="k">Building at</div><div class="v">AWS Labs</div></div>
         <div><div class="k">Focus areas</div><div class="v">Smart Contracts · Cloud · Telecoms</div></div>
       </div>
     </div>
