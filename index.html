@@ -316,6 +316,31 @@
   }
   .proj-link:hover{color:var(--signal);border-color:var(--signal);}
 
+  /* ============ CERTIFICATIONS ============ */
+  .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .cert-card{
+    border:1px solid var(--border);border-radius:8px;padding:22px;
+    background:var(--surface);display:flex;flex-direction:column;gap:12px;min-height:100%;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .cert-card:hover{border-color:var(--signal);transform:translateY(-2px);}
+  .cert-top{display:flex;align-items:center;gap:12px;}
+  .cert-badge{
+    width:44px;height:44px;border-radius:9px;flex:none;
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-mono);font-weight:800;font-size:12px;letter-spacing:0.01em;
+  }
+  .cert-issuer{font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);line-height:1.4;}
+  .cert-card h3{font-size:16.5px;line-height:1.32;}
+  .cert-date{font-family:var(--font-mono);font-size:12px;color:var(--faint);}
+  .cert-link{
+    font-family:var(--font-mono);font-size:12.5px;font-weight:700;color:var(--ink);
+    text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-top:auto;
+    border-bottom:1px solid var(--border-strong);padding-bottom:2px;width:fit-content;
+  }
+  .cert-link:hover{color:var(--signal);border-color:var(--signal);}
+  .cert-id{font-family:var(--font-mono);font-size:11px;color:var(--faint);margin-top:auto;word-break:break-all;}
+
   /* ============ CONTACT ============ */
   /* Deliberately theme-invariant: this band and the footer are always the
      dark-navy/light-text "punch" treatment, regardless of light/dark mode. */
@@ -413,10 +438,12 @@
     .proj-grid{grid-template-columns:repeat(2,1fr);}
     .proj-card.featured{grid-column:span 2;flex-direction:column;align-items:flex-start;}
     .proj-card.featured .proj-mark{writing-mode:horizontal-tb;border-left:none;border-bottom:2px solid var(--chain);padding-left:0;padding-bottom:8px;}
+    .cert-grid{grid-template-columns:repeat(2,1fr);}
   }
   @media (max-width:600px){
     .proj-grid{grid-template-columns:1fr;}
     .proj-card.featured{grid-column:span 1;}
+    .cert-grid{grid-template-columns:1fr;}
   }
 
   @media (max-width:640px){
@@ -435,6 +462,7 @@
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -755,6 +783,95 @@
         <div class="proj-card" style="align-items:flex-start;justify-content:center;">
           <p class="desc" style="margin-bottom:14px;">More projects and full write-ups live on GitHub — repos get added here as they mature.</p>
           <a class="proj-link" href="https://github.com/Maaruph1234" target="_blank" rel="noopener">See all repos ↗</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="certifications" id="certifications">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Certifications</div>
+        <h2>Formal training behind the field notes.</h2>
+        <p class="sub">Cloud, blockchain, and technology management credentials — mostly earned through AWS Skill Builder and Cyfrin Updraft.</p>
+      </div>
+
+      <div class="cert-grid">
+
+        <div class="cert-card">
+          <div class="cert-top">
+            <div class="cert-badge" style="background:#12213A;color:#FF9900;">aws</div>
+            <div class="cert-issuer">Amazon Web Services (AWS)</div>
+          </div>
+          <h3>AWS Billing and Cost Management</h3>
+          <div class="cert-date">Issued Aug 2026</div>
+          <div class="cert-id">Credential ID b403ad5c-9592-4bd5-9e63-428be33cd063</div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-top">
+            <div class="cert-badge" style="background:#12213A;color:#FF9900;">aws</div>
+            <div class="cert-issuer">Amazon Web Services (AWS)</div>
+          </div>
+          <h3>Introduction to Amazon Virtual Private Cloud (VPC)</h3>
+          <div class="cert-date">Issued Aug 2026</div>
+          <div class="cert-id">Credential ID bc508db7-9d33-4857-b833-353e8befc9ad</div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-top">
+            <div class="cert-badge" style="background:#12213A;color:#FF9900;">aws</div>
+            <div class="cert-issuer">Amazon Web Services (AWS)</div>
+          </div>
+          <h3>Job Roles in the Cloud</h3>
+          <div class="cert-date">Issued Jul 2026</div>
+          <a class="cert-link" href="https://skillbuilder.aws/ca401fa5-19c9-41fe-8161-5e35e036beee" target="_blank" rel="noopener">View credential ↗</a>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-top">
+            <div class="cert-badge" style="background:var(--chain);color:#0A121D;">C</div>
+            <div class="cert-issuer">Cyfrin Updraft</div>
+          </div>
+          <h3>Solidity Smart Contract Development</h3>
+          <div class="cert-date">Issued Aug 2025</div>
+          <a class="cert-link" href="https://profiles.cyfrin.io/u/maaruph1234/achievements/solidity" target="_blank" rel="noopener">View credential ↗</a>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-top">
+            <div class="cert-badge" style="background:#1B4F9C;color:#fff;">IA</div>
+            <div class="cert-issuer">Intl. Association of Engineers</div>
+          </div>
+          <h3>Member, IAENG</h3>
+          <div class="cert-date">Issued Jul 2026</div>
+          <div class="cert-id">Credential ID 571589</div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-top">
+            <div class="cert-badge" style="background:#A435F0;color:#fff;">U</div>
+            <div class="cert-issuer">Udemy · MTF Institute</div>
+          </div>
+          <h3>Executive Diploma in Technology Management</h3>
+          <div class="cert-date">Issued Jun 2024</div>
+          <a class="cert-link" href="https://ude.my/UC-d516d32c-8fb6-44a4-8492-970a9f10e243" target="_blank" rel="noopener">View credential ↗</a>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-top">
+            <div class="cert-badge" style="background:#A435F0;color:#fff;">U</div>
+            <div class="cert-issuer">Udemy · MTF Institute</div>
+          </div>
+          <h3>Executive Diploma in Operations Management</h3>
+          <div class="cert-date">Issued Jul 2024</div>
+          <a class="cert-link" href="https://ude.my/UC-673767dd-a729-4cbf-9635-5f8d4ed323b6" target="_blank" rel="noopener">View credential ↗</a>
+        </div>
+
+        <div class="cert-card" style="align-items:flex-start;justify-content:center;">
+          <p class="desc" style="margin-bottom:0;color:var(--muted);font-size:14.5px;">The full list of licenses &amp; certifications lives on LinkedIn.</p>
+          <a class="cert-link" href="https://www.linkedin.com/in/maarufyusuf/details/certifications/" target="_blank" rel="noopener">View on LinkedIn ↗</a>
         </div>
 
       </div>
