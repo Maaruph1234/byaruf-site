@@ -17,7 +17,7 @@ const today = new Date().toISOString().slice(0, 10)
 const pri = (p) => (p === '/' ? '1.0' : p.split('/').length > 3 ? '0.8' : '0.9')
 fs.writeFileSync(path.join(dist, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-  ROUTES.map((r) => `  <url><loc>https://byaruf.xyz${r.path}</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>${pri(r.path)}</priority></url>`).join('\n') +
+  ROUTES.map((r) => `  <url><loc>https://www.byaruf.xyz${r.path}</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>${pri(r.path)}</priority></url>`).join('\n') +
   `\n</urlset>\n`)
-fs.writeFileSync(path.join(dist, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: https://byaruf.xyz/sitemap.xml\n`)
+fs.writeFileSync(path.join(dist, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: https://www.byaruf.xyz/sitemap.xml\n`)
 console.log(`Prerendered ${ROUTES.length} pages + 404`)

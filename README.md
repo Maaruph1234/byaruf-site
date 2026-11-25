@@ -42,14 +42,14 @@ After changing variables, redeploy (Deployments > ... > Redeploy).
 
 ## Deployment (Vercel)
 
-The domain and DNS are on Vercel. Pushing to `main` deploys production. `vercel.json` sets the build command (`npm run build`), output (`dist`), trailing slashes, security headers, long caching for assets, www to apex redirect and redirects from the old URLs.
+The domain and DNS are on Vercel. Pushing to `main` deploys production. `vercel.json` sets the build command (`npm run build`), output (`dist`), trailing slashes, security headers, long caching for assets and redirects from the old URLs. The apex to www redirect is handled by the Vercel domain settings.
 
 ### Domain and DNS
 
 In Vercel > Project > Settings > Domains, keep both:
 
-- `byaruf.xyz` as the primary domain
-- `www.byaruf.xyz` set to redirect to `byaruf.xyz`
+- `www.byaruf.xyz` as the primary domain (this is how it is set up now, and the site's canonical URLs use it)
+- `byaruf.xyz` set to redirect to `www.byaruf.xyz`
 
 Because the nameservers are Vercel's (`ns1.vercel-dns.com`, `ns2.vercel-dns.com`), Vercel manages the records and HTTPS certificates automatically. If you ever move DNS elsewhere, use:
 

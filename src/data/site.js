@@ -1,6 +1,6 @@
 export const SITE = {
   name: 'ByAruf',
-  url: 'https://byaruf.xyz',
+  url: 'https://www.byaruf.xyz',
   founder: "Ma'aruf Yusuf",
   email: 'bookings@byaruf.xyz',
   phone: '+234 906 525 4589',
